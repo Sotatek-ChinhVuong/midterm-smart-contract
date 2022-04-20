@@ -1,0 +1,287 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xF17860f245063611d96F4904bFB1D1a7Cd200FAF",
+    "txHash": "0x9b613f8c91e844ac3adcb84fde11058789d95da954f195e4dfd61a87be9fb160"
+  },
+  "proxies": [
+    {
+      "address": "0xB90215B4f63C28E90beDFbB546F9De4B51faf7c2",
+      "txHash": "0xa67b405dcb2b373744fe7eb8961b996fde86af2fd6482e1c3fe81985572a3b4f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x2e1cB76335f55750258964951cd30953124e3a23",
+      "txHash": "0x0a0e862a73613e1df8e3174af8cd2b01a4302e97bf1658f2c198bb76d61fe893",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "925ac28bbf9839bef9f86ec5b41ec3785d913ce448340c01b8751ecba4a82e6f": {
+      "address": "0x13d3C3FAA3dbee05fd58AE104c4D960d06d1906c",
+      "txHash": "0xf7b054fb8f5e0ad180831911a49756ccdf0654acaf14b9bb679c8affa04b7c49",
+      "layout": {
+        "storage": [
+          {
+            "label": "value",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "Box",
+            "src": "contracts\\Box.sol:5"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "01c3ba37320016517cdb11c3854419e58447d3987ca7ee58cc7d8498e0984ab2": {
+      "address": "0xFaC0849Ae7e0dC593BC09EDB8f000b4Fe3DDDe7B",
+      "txHash": "0xfdc542d5a27eb8f67ca5574507e08b07463016f25978ff96f80b9bb8e20464f7",
+      "layout": {
+        "storage": [
+          {
+            "label": "value",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "BoxV2",
+            "src": "contracts\\BoxV2.sol:6"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "f4fe168b34a74129c35bb94bd39a39f2c121edf6efead0d83a407820311860a0": {
+      "address": "0x2bd8c79AD5E5dBfC9E5854Db9750830B1df03Ca3",
+      "txHash": "0x2ce6688446fef217e830a78cb1bfbd25f9beae29caed30d67e28ebbea65cd83b",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:39"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:44"
+          },
+          {
+            "label": "_orderId",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "MaketplaceV1",
+            "src": "contracts\\MaketplaceV1.sol:27"
+          },
+          {
+            "label": "_orders",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_uint256,t_struct(Order)2180_storage)",
+            "contract": "MaketplaceV1",
+            "src": "contracts\\MaketplaceV1.sol:28"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_enum(OrderStatus)2168": {
+            "label": "enum MaketplaceV1.OrderStatus",
+            "members": [
+              "Active",
+              "Sold",
+              "Cancelled"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Order)2180_storage)": {
+            "label": "mapping(uint256 => struct MaketplaceV1.Order)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Order)2180_storage": {
+            "label": "struct MaketplaceV1.Order",
+            "members": [
+              {
+                "label": "status",
+                "type": "t_enum(OrderStatus)2168",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 1,
+                "slot": "0"
+              },
+              {
+                "label": "token",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "a61f12ad7c1985a7e17d6abd9120306b8b62791edbc9e371bf4bb09195f0fabb": {
+      "address": "0x3CBbe0Cc7FE743Ce10a45e89e632b7798684382F",
+      "txHash": "0xfc7d59db15d7a0a26a809f7ee3e8fea0990f52f81a3b7bf405636a2351938cc0",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:39"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:44"
+          },
+          {
+            "label": "_orderId",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "MaketplaceV2",
+            "src": "contracts\\MaketplaceV2.sol:28"
+          },
+          {
+            "label": "_orders",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_uint256,t_struct(Order)2518_storage)",
+            "contract": "MaketplaceV2",
+            "src": "contracts\\MaketplaceV2.sol:29"
+          },
+          {
+            "label": "_treasury",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "MaketplaceV2",
+            "src": "contracts\\MaketplaceV2.sol:31"
+          },
+          {
+            "label": "fee",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "MaketplaceV2",
+            "src": "contracts\\MaketplaceV2.sol:32"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_enum(OrderStatus)2506": {
+            "label": "enum MaketplaceV2.OrderStatus",
+            "members": [
+              "Active",
+              "Sold",
+              "Cancelled"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Order)2518_storage)": {
+            "label": "mapping(uint256 => struct MaketplaceV2.Order)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Order)2518_storage": {
+            "label": "struct MaketplaceV2.Order",
+            "members": [
+              {
+                "label": "status",
+                "type": "t_enum(OrderStatus)2506",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 1,
+                "slot": "0"
+              },
+              {
+                "label": "token",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    }
+  }
+}
