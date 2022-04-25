@@ -315,4 +315,33 @@ describe('MaketplaceV3', () => {
         })
 
     })
+    describe("check get stakeItem", async () => {
+        beforeEach(async () => {
+           
+            Token = await ethers.getContractFactory('HPToken')
+            token = await Token.deploy(BigNumber.from(21000).mul(decimal))
+            await token.deployed()
+            // console.log(nft.address , "address nft")
+            await maketplaceV3.initialize(token.address, nft.address);
+        })
+
+        it("success", async () => {
+            const [owner ] = await ethers.getSigners()
+            await nft.mintNFT(owner.address, metaDataURI)
+            await nft.approve(maketplaceV3.address, 1)
+            await maketplaceV3.setHashRate(1, 200)        
+            await maketplaceV3.stake(1)
+            let o = await nft.ownerOf(1)
+            expect(o).to.equal(maketplaceV3.address);
+            let res =    await maketplaceV3.getStakeItem(1)
+            console.log(res)
+            expect(res.tokenId).to.equal(1)
+            res =    await maketplaceV3.getStakeItem(2)
+            console.log("🚀 ~ file: v3.js ~ line 340 ~ it ~ res", res)
+            expect(res.tokenId).to.equal(0)
+            
+        })
+    })
+
+
 })
