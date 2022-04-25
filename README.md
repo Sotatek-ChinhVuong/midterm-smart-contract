@@ -23,7 +23,10 @@ PROXY_ADDRESS=''
 
 ```
 # Marketplace address
-https://rinkeby.etherscan.io/address/0x2e1cB76335f55750258964951cd30953124e3a23#code
+https://rinkeby.etherscan.io/address/0xD228A1c96614e833B74E2FfBd3cE1dDba3FE235a#code
 
 # Test 
 ![alt text](https://github.com/Sotatek-ChinhVuong/midterm-smart-contract/blob/main/rs.PNG?raw=true)
+
+# HPToken address 
+https://rinkeby.etherscan.io/address/0xF99Fe3bd99EBC01d8de23286f1bf7474e4f6001e#code

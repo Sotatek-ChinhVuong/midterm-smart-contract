@@ -14,6 +14,11 @@
       "address": "0x2e1cB76335f55750258964951cd30953124e3a23",
       "txHash": "0x0a0e862a73613e1df8e3174af8cd2b01a4302e97bf1658f2c198bb76d61fe893",
       "kind": "transparent"
+    },
+    {
+      "address": "0xD228A1c96614e833B74E2FfBd3cE1dDba3FE235a",
+      "txHash": "0x0de2622555a60cff585169f37c13d29db6879d743453261e15eec5a603315520",
+      "kind": "transparent"
     }
   ],
   "impls": {
@@ -94,7 +99,7 @@
             "label": "_orders",
             "offset": 0,
             "slot": "2",
-            "type": "t_mapping(t_uint256,t_struct(Order)2180_storage)",
+            "type": "t_mapping(t_uint256,t_struct(Order)3105_storage)",
             "contract": "MaketplaceV1",
             "src": "contracts\\MaketplaceV1.sol:28"
           }
@@ -108,7 +113,7 @@
             "label": "bool",
             "numberOfBytes": "1"
           },
-          "t_enum(OrderStatus)2168": {
+          "t_enum(OrderStatus)3093": {
             "label": "enum MaketplaceV1.OrderStatus",
             "members": [
               "Active",
@@ -117,16 +122,16 @@
             ],
             "numberOfBytes": "1"
           },
-          "t_mapping(t_uint256,t_struct(Order)2180_storage)": {
+          "t_mapping(t_uint256,t_struct(Order)3105_storage)": {
             "label": "mapping(uint256 => struct MaketplaceV1.Order)",
             "numberOfBytes": "32"
           },
-          "t_struct(Order)2180_storage": {
+          "t_struct(Order)3105_storage": {
             "label": "struct MaketplaceV1.Order",
             "members": [
               {
                 "label": "status",
-                "type": "t_enum(OrderStatus)2168",
+                "type": "t_enum(OrderStatus)3093",
                 "offset": 0,
                 "slot": "0"
               },
@@ -275,6 +280,211 @@
               }
             ],
             "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "44f67fd12f958de0c4e6e8983e4472b670dc2af97e5705832d5fe510229dff3b": {
+      "address": "0x1B82345FBEeE01F1a1a6F6C07c2E690B93cEc809",
+      "txHash": "0x2a0949d4697a9805d3b5e7c98d93f2e2abe21361f28846899acf2519fcc502f2",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:39"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:44"
+          },
+          {
+            "label": "_orderId",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:53"
+          },
+          {
+            "label": "_orders",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_uint256,t_struct(Order)729_storage)",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:54"
+          },
+          {
+            "label": "_treasury",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:56"
+          },
+          {
+            "label": "fee",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:57"
+          },
+          {
+            "label": "hashrate",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:60"
+          },
+          {
+            "label": "rewardsToken",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_contract(ERC20Mintable)711",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:61"
+          },
+          {
+            "label": "stakingNFT",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_contract(IERC721)655",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:62"
+          },
+          {
+            "label": "nftToUser",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:63"
+          },
+          {
+            "label": "stakingItems",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_mapping(t_uint256,t_struct(StakeNFT)734_storage)",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:64"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_address",
+            "contract": "MaketplaceV3",
+            "src": "contracts\\MaketplaceV3.sol:65"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(ERC20Mintable)711": {
+            "label": "contract ERC20Mintable",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC721)655": {
+            "label": "contract IERC721",
+            "numberOfBytes": "20"
+          },
+          "t_enum(OrderStatus)717": {
+            "label": "enum MaketplaceV3.OrderStatus",
+            "members": [
+              "Active",
+              "Sold",
+              "Cancelled"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Order)729_storage)": {
+            "label": "mapping(uint256 => struct MaketplaceV3.Order)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(StakeNFT)734_storage)": {
+            "label": "mapping(uint256 => struct MaketplaceV3.StakeNFT)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Order)729_storage": {
+            "label": "struct MaketplaceV3.Order",
+            "members": [
+              {
+                "label": "status",
+                "type": "t_enum(OrderStatus)717",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 1,
+                "slot": "0"
+              },
+              {
+                "label": "token",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(StakeNFT)734_storage": {
+            "label": "struct MaketplaceV3.StakeNFT",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "timestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
           },
           "t_uint256": {
             "label": "uint256",

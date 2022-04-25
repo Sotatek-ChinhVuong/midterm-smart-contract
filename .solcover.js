@@ -1,3 +1,3 @@
 module.exports = {
-	skipFiles: ["Hp.sol"],
+	skipFiles: ["Hp.sol", "HPToken.sol"],
 }

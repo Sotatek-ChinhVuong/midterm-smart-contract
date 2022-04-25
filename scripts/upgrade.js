@@ -7,9 +7,9 @@ console.log(PROXY_ADDRESS)
 
 async function main() {
 	// // // Upgrade
-	const MaketplaceV2 = await ethers.getContractFactory("MaketplaceV2")
-	const maketplaceV2 = await upgrades.upgradeProxy(PROXY_ADDRESS, MaketplaceV2)
-	console.log("Marketplace upgraded ", maketplaceV2.address)
+	const MaketplaceV3 = await ethers.getContractFactory("MaketplaceV3")
+	const maketplaceV3 = await upgrades.upgradeProxy(PROXY_ADDRESS, MaketplaceV3)
+	console.log("Marketplace upgraded ", maketplaceV3.address)
 }
 
 main()

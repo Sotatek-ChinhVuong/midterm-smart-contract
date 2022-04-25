@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx hardhat coverage --solcoverjs .solcover.js",
     "deploy": "npx hardhat run scripts/deploy.js --network rinkeby",
-		"upgrade": "npx hardhat run scripts/upgrade.js --network rinkeby"
+    "upgrade": "npx hardhat run scripts/upgrade.js --network rinkeby",
+    "verify":"npx hardhat verify --contract contracts/HPToken.sol:HPToken 0xF99Fe3bd99EBC01d8de23286f1bf7474e4f6001e --network rinkeby  --constructor-args arguments.js"
   },
   "keywords": [],
   "author": "",
